@@ -14,5 +14,5 @@ Start typing 'install' to select 'Package Control: Install Package', then search
 
 You can also install this package manually by entering the Packages directory of Sublime Text 2/3 and issuing on a terminal:
 
-    git clone https://github.com/alienhard/SublimeAllAutocomplete
+    git clone https://github.com/PSeitz/SublimeAllFilesAutocomplete.git
 
