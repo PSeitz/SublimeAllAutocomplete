@@ -17,7 +17,7 @@ MAX_FIX_TIME_SECS_PER_VIEW = 0.01
 MAX_VIEW_SIZE = 20000
 ONLY_SAME_FILE_TYPE = True
 
-class AllAutocomplete(sublime_plugin.EventListener):
+class AllFilesAutocomplete(sublime_plugin.EventListener):
 
     def on_query_completions(self, view, prefix, locations):
         words = []
