@@ -1,4 +1,4 @@
-All Autocomplete Sublime Text
+All Files Autocomplete Sublime Text
 ===========================================================
 
 Extends the default autocomplete to find matches in all open files.
