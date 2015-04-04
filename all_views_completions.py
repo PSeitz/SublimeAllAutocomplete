@@ -14,13 +14,13 @@ MAX_WORD_SIZE = 30
 MAX_VIEWS = 20
 MAX_WORDS_PER_VIEW = 50
 MAX_FIX_TIME_SECS_PER_VIEW = 0.01
-MAX_VIEW_SIZE = 20000;
+MAX_VIEW_SIZE = 20000
+ONLY_SAME_FILE_TYPE = True
 
 class AllAutocomplete(sublime_plugin.EventListener):
 
     def on_query_completions(self, view, prefix, locations):
         words = []
-
         # Limit number of views but always include the active view. This
         # view goes first to prioritize matches close to cursor position.
         other_views = [v for v in sublime.active_window().views() if v.id != view.id]
@@ -28,6 +28,8 @@ class AllAutocomplete(sublime_plugin.EventListener):
         views = views[0:MAX_VIEWS]
 
         for v in views:
+            if ONLY_SAME_FILE_TYPE and v.scope_name(0) != view.scope_name(0):
+                continue
             if v.size() > MAX_VIEW_SIZE:
                 continue
             if len(locations) > 0 and v.id == view.id:
