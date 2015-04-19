@@ -6,6 +6,7 @@ import sublime
 import re
 import time
 from os.path import basename
+import os.path
 
 # limits to prevent bogging down the system
 MIN_WORD_SIZE = 3
@@ -28,7 +29,7 @@ class AllFilesAutocomplete(sublime_plugin.EventListener):
         views = views[0:MAX_VIEWS]
 
         for v in views:
-            if ONLY_SAME_FILE_TYPE and v.scope_name(0) != view.scope_name(0):
+            if ONLY_SAME_FILE_TYPE and os.path.splitext(v.scope_name(0))[1] != os.path.splitext(view.scope_name(0))[1]:
                 continue
             if v.size() > MAX_VIEW_SIZE:
                 continue
