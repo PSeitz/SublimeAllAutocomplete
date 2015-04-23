@@ -1,0 +1,29 @@
+{
+  "name": "SublimeAllFilesAutocomplete",
+  "version": "1.0.0",
+  "description": "checks all open files in sublime for auto completion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PSeitz/SublimeAllFilesAutocomplete.git"
+  },
+  "keywords": [
+    "sublime",
+    "text",
+    "3",
+    "all",
+    "files",
+    "open",
+    "files",
+    "autocomplete"
+  ],
+  "author": "Pascal Seitz",
+  "license": "CC",
+  "bugs": {
+    "url": "https://github.com/PSeitz/SublimeAllFilesAutocomplete/issues"
+  },
+  "homepage": "https://github.com/PSeitz/SublimeAllFilesAutocomplete"
+}
